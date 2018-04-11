@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @book.name %>
+</p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
+
+<%- @book.pages.each do |page| -%>
+<%= content_tag :div do %>
+<%= image_tag page.image_url %>
+<%- end -%>
+<%- end -%>

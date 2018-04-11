@@ -7,9 +7,8 @@
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
-
-<%- @book.pages.each do |page| -%>
+<%- @book.pdf.each do |page| -%>
 <%= content_tag :div do %>
-<%= image_tag page.image_url %>
+<%= image_tag page.url %>
 <%- end -%>
 <%- end -%>
